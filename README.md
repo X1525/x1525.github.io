@@ -1,2 +1,2 @@
 # x1525.github.io
-Webpage for my website
+A website containing my projects that can be downloaded.
