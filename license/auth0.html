@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>License Activation</title>
+    <script>
+      // Define a list of authorized keys
+      var authorizedKeys = ["F235-642L-93RX", "key2", "key3"];
+
+      // Function to check if the key is valid
+      function checkKey(key) {
+        return authorizedKeys.includes(key);
+      }
+
+      // Main function to check the key and display the result
+      function checkLicense() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const key = urlParams.get('key');
+        if (checkKey(key)) {
+          document.getElementById("result").textContent = "True";
+        } else {
+          document.getElementById("result").textContent = "False";
+        }
+      }
+    </script>
+  </head>
+  <body onload="checkLicense()">
+    <div id="result"></div>
+  </body>
+</html>
