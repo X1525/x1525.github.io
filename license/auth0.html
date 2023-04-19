@@ -17,17 +17,15 @@
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const key = urlParams.get('key');
-        console.log("Key:", key);
         if (checkKey(key)) {
           document.getElementById("result").textContent = "True";
         } else {
           document.getElementById("result").textContent = "False";
         }
       }
-      }
     </script>
   </head>
   <body onload="checkLicense()">
-    <div id="result"></div>
+    <p id="result"></p>
   </body>
 </html>
